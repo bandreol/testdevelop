@@ -11,11 +11,11 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        print DisplayGreeting(3);
+        $hourOfDay = 3;
+        print "<p>Hour: " . $hourOfDay . "</p>";
+        print "<p>" . DisplayGreeting($hourOfDay) . "</p>";
         function DisplayGreeting ($hourOfDay){
             $time = "";
-            $hourOfDay = (int)$hourOfDay;
-            print "<p>Hour: " . $hourOfDay . "</p>";
             if($hourOfDay < 6 ){
                 $time = "Good Night!";
             }else if($hourOfDay < 12){
